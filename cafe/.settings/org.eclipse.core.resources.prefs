@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebContent/templates/admins/inc/header.jsp=UTF-8
+encoding//WebContent/templates/admins/inc/lib/headerLib.jsp=UTF-8
+encoding//WebContent/templates/publics/inc/header.jsp=UTF-8
+encoding//WebContent/templates/publics/inc/lib/headerLib.jsp=UTF-8
+encoding//WebContent/views/admins/index.jsp=UTF-8
+encoding//WebContent/views/admins/statistics/index.jsp=UTF-8
+encoding//WebContent/views/auths/login.jsp=UTF-8
+encoding//WebContent/views/publics/index.jsp=UTF-8
+encoding//src/utils/DBConnectionUtil.java=UTF-8
+encoding/<project>=UTF-8

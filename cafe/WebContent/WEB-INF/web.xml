@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>cafe</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>mail</servlet-name>
+		<servlet-class>MailApp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>mail</servlet-name>
+		<url-pattern>/mail</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- auths -->
+	<servlet>
+		<servlet-name>AdminPermissionController</servlet-name>
+		<servlet-class>controllers.admins.permission.AdminPermissionController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminPermissionController</servlet-name>
+		<url-pattern>/admin/permission</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminPermissionEditController</servlet-name>
+		<servlet-class>controllers.admins.permission.AdminPermissionEditController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminPermissionEditController</servlet-name>
+		<url-pattern>/admin/permission/edit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminPermissionDelController</servlet-name>
+		<servlet-class>controllers.admins.permission.AdminPermissionDelController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminPermissionDelController</servlet-name>
+		<url-pattern>/admin/permission/del</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>controllers.auths.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterController</servlet-name>
+		<servlet-class>controllers.auths.RegisterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterController</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>controllers.auths.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	<!-- auths -->
+
+	<!--start public -->
+	<servlet>
+		<servlet-name>PublicIndexController</servlet-name>
+		<servlet-class>controllers.publics.PublicIndexController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicIndexController</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicDetailController</servlet-name>
+		<servlet-class>controllers.publics.PublicDetailController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicDetailController</servlet-name>
+		<url-pattern>/detail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>publicAddToCartController</servlet-name>
+		<servlet-class>controllers.publics.publicAddToCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>publicAddToCartController</servlet-name>
+		<url-pattern>/addtocart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>publicOrderController</servlet-name>
+		<servlet-class>controllers.publics.publicOrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>publicOrderController</servlet-name>
+		<url-pattern>/product/order</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicFavouriteController</servlet-name>
+		<servlet-class>controllers.publics.PublicFavouriteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicFavouriteController</servlet-name>
+		<url-pattern>/product/favourite</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicCommentController</servlet-name>
+		<servlet-class>controllers.publics.PublicCommentController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicCommentController</servlet-name>
+		<url-pattern>/product/comment</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicRatingController</servlet-name>
+		<servlet-class>controllers.publics.PublicRatingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicRatingController</servlet-name>
+		<url-pattern>/product/rating</url-pattern>
+	</servlet-mapping>
+
+	<!--end public -->
+
+	<!-- start admin -->
+	<servlet>
+		<servlet-name>AdminIndexController</servlet-name>
+		<servlet-class>controllers.admins.AdminIndexController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexController</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+
+	<!-- //menu -->
+	<servlet>
+		<servlet-name>AdminIndexCategoryController</servlet-name>
+		<servlet-class>controllers.admins.menu.AdminIndexMenuController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexCategoryController</servlet-name>
+		<url-pattern>/admin/menu</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditMenuController</servlet-name>
+		<servlet-class>controllers.admins.menu.AdminEditMenuController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditMenuController</servlet-name>
+		<url-pattern>/admin/menu/edit</url-pattern>
+	</servlet-mapping>
+
+	<!-- Size -->
+	<!-- <servlet> <servlet-name>AdminIndexSizeMenuController</servlet-name> 
+		<servlet-class>controllers.admins.menu.size.AdminIndexSizeMenuController</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>AdminIndexSizeMenuController</servlet-name> 
+		<url-pattern>/admin/menu/size</url-pattern> </servlet-mapping> -->
+
+	<!-- Product -->
+	<servlet>
+		<servlet-name>AdminIndexProductMenuController</servlet-name>
+		<servlet-class>controllers.admins.menu.product.AdminIndexProductMenuController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexProductMenuController</servlet-name>
+		<url-pattern>/admin/menu/product</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditProductMenuController</servlet-name>
+		<servlet-class>controllers.admins.menu.product.AdminEditProductMenuController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditProductMenuController</servlet-name>
+		<url-pattern>/admin/menu/product/edit</url-pattern>
+	</servlet-mapping>
+
+	<!-- Price -->
+	<!-- <servlet> <servlet-name>AdminIndexPriceMenuController</servlet-name> 
+		<servlet-class>controllers.admins.menu.price.AdminIndexPriceMenuController</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>AdminIndexPriceMenuController</servlet-name> 
+		<url-pattern>/admin/menu/price</url-pattern> </servlet-mapping> -->
+
+	<!-- Account -->
+	<!-- Cat account -->
+	<servlet>
+		<servlet-name>AdminIndexUserController</servlet-name>
+		<servlet-class>controllers.admins.user.AdminIndexUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexUserController</servlet-name>
+		<url-pattern>/admin/user</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditUserController</servlet-name>
+		<servlet-class>controllers.admins.user.AdminEditUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditUserController</servlet-name>
+		<url-pattern>/admin/user/edit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexCatUserController</servlet-name>
+		<servlet-class>controllers.admins.user.cat.AdminIndexCatUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexCatUserController</servlet-name>
+		<url-pattern>/admin/user/cat</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditCatUserController</servlet-name>
+		<servlet-class>controllers.admins.user.cat.AdminEditCatUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditCatUserController</servlet-name>
+		<url-pattern>/admin/user/cat/edit</url-pattern>
+	</servlet-mapping>
+
+	<!-- order -->
+
+	<servlet>
+		<servlet-name>AdminOrderController</servlet-name>
+		<servlet-class>controllers.admins.order.AdminOrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminOrderController</servlet-name>
+		<url-pattern>/admin/order</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexCatOrderController</servlet-name>
+		<servlet-class>controllers.admins.order.cat.AdminIndexCatOrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexCatOrderController</servlet-name>
+		<url-pattern>/admin/order/cat</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditCatOrderController</servlet-name>
+		<servlet-class>controllers.admins.order.cat.AdminEditCatOrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditCatOrderController</servlet-name>
+		<url-pattern>/admin/order/cat/edit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminStatisticController</servlet-name>
+		<servlet-class>controllers.admins.statistic.AdminStatisticController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminStatisticController</servlet-name>
+		<url-pattern>/admin/statistic</url-pattern>
+	</servlet-mapping>
+
+	<!--end admin -->
+</web-app>

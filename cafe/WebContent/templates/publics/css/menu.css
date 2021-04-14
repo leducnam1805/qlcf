@@ -1,0 +1,17 @@
+
+@media (min-width: 767px) {
+   .navbar-nav .dropdown-menu .caret { transform: rotate(-90deg);}
+}
+
+.menu1 ul{
+	position : absolute;
+	display:none;
+}
+.menu1 li{
+	position : relative;
+}
+.menu1 ul ul {
+	left:157px;
+	top:0px;
+}
+
